@@ -1,0 +1,164 @@
+/* Logo */
+.logo {
+    width: 80px; /* Tamaño ajustable según tu diseño */
+    height: auto;
+}
+
+/* Encabezado */
+header {
+    padding: 20px 0; /* Asegura que haya más espacio arriba y abajo del encabezado */
+}
+
+header .navbar-nav li {
+    margin-right: 20px; /* Espaciado entre elementos de la barra de navegación */
+}
+
+/* Promociones - Imagen de Fondo */
+.promociones-section {
+    background-image: url('marcomexican.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Texto dentro de promociones */
+.promociones-section h2,
+.promociones-section p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em; 
+}
+
+/* Imágenes del Menú */
+.img-fluid {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Hover sobre imágenes */
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Sección de Testimonios */
+.testimonios {
+    background-color: #f8f9fa;
+    padding: 40px 0; 
+}
+
+.testimonios h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #d9534f; 
+}
+
+.testimonios p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonios .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.testimonios .col-md-4 p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.testimonios .col-md-4 strong {
+    font-size: 1.2em;
+    color: #d9534f; 
+}
+
+/* Efecto de animación en los testimonios */
+.testimonios .col-md-4 {
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+.testimonios .col-md-4:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.testimonios .col-md-4:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.testimonios .col-md-4:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    font-size: 0.9em;
+    margin-top: 20px;
+    padding: 20px 0; /* Espacio adicional en el pie de página */
+    background-color: #343a40; /* Color de fondo oscuro */
+    color: white;
+}
+
+/* Estilo del formulario de pedido */
+.pedido form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pedido .form-control {
+    border-radius: 5px;
+}
+
+.pedido .btn-danger {
+    font-size: 1.1em;
+    padding: 10px 20px;
+}
+
+/* Mensaje de confirmación */
+#pedidoConfirmationMessage {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.sugerencia-platillo {
+    background-color: #fff8f0;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.animate-text,
+.animate-img {
+    opacity: 0;
+    transform: translateY(40px); /* parte desde abajo */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0px);
+}
+
+.img-nosotros {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px; /* Limita la altura máxima */
+    object-fit: cover;
+}

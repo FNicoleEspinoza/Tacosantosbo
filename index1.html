@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comida Mexicana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+       <!-- Encabezado con logo y barra de navegación -->
+    <header class="bg-danger text-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <img src="logo.png" alt="Logo del Restaurante" class="logo">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Promociones -->
+    <section class="promociones-section text-white py-5">
+        <div class="container text-center">
+            <h2 class="text-center mb-4">Promociones</h2>
+            <p class="mb-1">CATER YOUR NEXT PARTY WITH US</p>
+            <p>¡Obtén un 25% de descuento en nuestro servicio de catering para tu próximo evento!</p>
+        </div>
+    </section>
+
+
+<section class="sobre-nosotros py-5 bg-light">
+  <div class="container d-flex flex-column flex-md-row align-items-center">
+    <div class="col-md-6 text-center text-md-start animate-text">
+      <h2>Sobre Nosotros</h2>
+       <p>Somos un restaurante apasionado por compartir el auténtico sabor de México. Desde nuestras recetas tradicionales hasta nuestros ingredientes frescos, cada platillo está hecho con amor y respeto por nuestras raíces.</p>
+        <p>Ya sea que estés buscando una experiencia gastronómica vibrante o simplemente un lugar acogedor para compartir con amigos, ¡aquí te esperamos con los brazos abiertos y un buen taco en la mano!</p>
+      
+    </div>
+    <div class="col-md-6 text-center animate-img">
+      <img src="nosotros.jpg" alt="Nuestro equipo" class="img-fluid img-nosotros rounded">
+    </div>
+  </div>
+</section>
+
+
+    <!-- Sección del Menú -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestro Menú</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="fajitas.jpg" alt="Mexican Fajitas" class="img-fluid mb-2">
+                    <h4 class="text-danger">Mexican Fajitas</h4>
+                    <p>$25.50</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="chili.jpg" alt="Mexican Chili" class="img-fluid mb-2">
+                    <h4 class="text-warning">Mexican Chili</h4>
+                    <p>$14.90</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="Tacoderes.jpg" alt="Tacos" class="img-fluid mb-2">
+                    <h4 class="text-success">Tacos</h4>
+                    <p>$23.49</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="enchiladas.jpg" alt="Enchiladas" class="img-fluid mb-2">
+                    <h4 class="text-info">Enchiladas</h4>
+                    <p>$32.50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+<section class="testimonios py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <p>"¡La mejor comida mexicana que he probado! El servicio fue increíble y el ambiente muy acogedor."</p>
+                <p><strong>Juan Pérez</strong></p>
+            </div>
+            <div class="col-md-4">
+                <p>"Definitivamente volveré. Las fajitas estaban deliciosas, ¡y el servicio fue excelente!"</p>
+                <p><strong>María González</strong></p>
+            </div>
+            <div class="col-md-4">
+                <p>"Un lugar perfecto para disfrutar con amigos. La comida es increíble y el personal muy amable."</p>
+                <p><strong>Laura Torres</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Formulario de Pedido -->
+<section class="pedido py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Realiza tu pedido</h2>
+        <form id="pedidoForm" onsubmit="return showConfirmation(event)">
+            <div class="row">
+                <!-- Nombre del Cliente -->
+                <div class="col-md-6 mb-3">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="col-md-6 mb-3">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+                <!-- Producto 1 -->
+                <div class="col-md-6 mb-3">
+                    <label for="producto1">Producto :</label>
+                    <select id="producto1" class="form-control" required>
+                        <option value="Mexican Fajitas">Mexican Fajitas - $25.50</option>
+                        <option value="Mexican Chili">Mexican Chili - $14.90</option>
+                        <option value="Tacos">Tacos - $23.49</option>
+                        <option value="Enchiladas">Enchiladas - $32.50</option>
+                    </select>
+                </div>
+
+                <!-- Cantidad Producto 1 -->
+                <div class="col-md-6 mb-3">
+                    <label for="cantidad1">Cantidad :</label>
+                    <input type="number" id="cantidad1" class="form-control" min="1" value="1" required>
+                </div>
+
+                <!-- Comentarios adicionales -->
+                <div class="col-md-12 mb-3">
+                    <label for="comentarios">Agrande su pedido aquí (Opcional):</label>
+                    <textarea id="comentarios" class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-danger">Enviar Pedido</button>
+                </div>
+            </div>
+        </form>
+        
+        <div id="confirmationMessage" class="mt-4" style="display:none;">
+            <p class="alert alert-success">¡Gracias por tu pedido! Nos pondremos en contacto contigo pronto.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="sugerencia-platillo container mt-5 text-center">
+    <h2>¿No sabes que pedir?</h2>
+    <p>Elige tu estado de ánimo y te damos una recomendación:</p>
+    
+    <div class="mb-3">
+        <button class="btn btn-danger mood-btn" data-mood="hambriento">😋 Hambriento</button>
+        <button class="btn btn-warning mood-btn" data-mood="cononda">😎 Con onda</button>
+        <button class="btn btn-success mood-btn" data-mood="tranquilo">😌 Tranquilo</button>
+    </div>
+
+    <div id="sugerenciaResultado" class="alert alert-info d-none"></div>
+</section>
+
+
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Comida Mexicana | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts: jQuery primero -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle JS (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <!-- Script personalizado -->
+    <script>
+$("#pedidoForm").on("submit", function (event) {
+    event.preventDefault();
+
+    const nombre = $("#nombre").val();
+    const email = $("#email").val();
+    const producto1 = $("#producto1").val();
+    const cantidad1 = $("#cantidad1").val();
+    const comentarios = $("#comentarios").val();
+
+    let mensajePedido = `Pedido de ${nombre} (Correo: ${email})\n\n`;
+    mensajePedido += `Producto 1: ${cantidad1} x ${producto1}\n`;
+    if (comentarios) {
+        mensajePedido += `Comentarios adicionales: ${comentarios}`;
+    }
+
+    $(this).hide();
+
+    $("#confirmationMessage")
+        .html(`
+            <p class="alert alert-success">¡Gracias por tu pedido, ${nombre}!</p>
+            <p>Resumen de tu pedido:</p>
+            <pre>${mensajePedido}</pre>
+        `)
+        .show();
+});
+
+
+// Este bloque se ejecuta apenas cargue la página
+$(document).ready(function () {
+    $(".mood-btn").click(function () {
+        const mood = $(this).data("mood");
+        let mensaje = "";
+
+        switch (mood) {
+            case "hambriento":
+                mensaje = "¡Te recomendamos unas enchiladas gigantes con extra queso!";
+                break;
+            case "cononda":
+                mensaje = "Una orden de tacos al pastor con guacamole y salsa especial 🔥";
+                break;
+            case "tranquilo":
+                mensaje = "¿Qué tal unas fajitas con queso fundido y champiñones?";
+                break;
+        }
+
+        $("#sugerenciaResultado").hide().removeClass("d-none").text(mensaje).fadeIn(600);
+    });
+      // Animación suave al hacer scroll (texto + imagen)
+    $(window).on("scroll", function () {
+      $(".animate-text, .animate-img").each(function () {
+        const top = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        if (scroll + windowHeight > top + 50) {
+          $(this).addClass("visible");
+        }
+      });
+    });
+
+    // Dispara la animación si ya está visible al cargar
+    $(window).trigger("scroll");
+  });
+</script>
+
+</body>
+</html>
